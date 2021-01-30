@@ -1,7 +1,7 @@
-variable "bucket_suffix" {
-    type        = string
+variable "bucket_name" {
+    type        = list(string)
     description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
-    default     = "hourly"
+    default     = ["hourly","daily","weekly"]
 }
 
 variable "acl" {
@@ -17,7 +17,7 @@ variable "versioning" {
 }
 
 variable "transition_days" {
-    type: map
+    type =  map
     description = "(Optional) Specifies object transition period"
     default = {
         transition1 = 30
@@ -26,11 +26,11 @@ variable "transition_days" {
 }
 
 variable "transition_storage" {
-    type: map
+    type = map
     description = "(Optional) Specifies object transition storage"
     default = {
-        storage1 = 30
-        storage2 = 60
+        storage1 = "STANDARD_IA"
+        storage2 = "GLACIER"
     }
 }
 

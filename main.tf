@@ -1,5 +1,12 @@
+resource "random_string" "bucket" {
+  length  = 8
+  special = false
+  upper   = false
+}
+
 resource "aws_s3_bucket" "bucket" {
-    bucket_ = crazy-berlin-weather-${var.bucket_suffix}
+    count = ${length(var.bucket_name)}
+    bucket_ = berlin-weather-${var.bucket_name[count.index]}-${random_string.bucket.result}
     acl    = var.acl
 
     versioning {

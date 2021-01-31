@@ -35,8 +35,7 @@ Name | Description
 ---- | -----------
 s3_bucket_id | The name of the bucket
 s3_bucket_region | The AWS region this bucket resides in
-s3_bucket_bucket_domain_name | The bucket domain name. 
-                               Will be of format bucketname.s3.amazonaws.com.
+s3_bucket_bucket_domain_name | The bucket domain name. Will be of format bucketname.s3.amazonaws.com.
 
 #   Author
 

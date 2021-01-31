@@ -20,7 +20,7 @@ AWS version ~3.0 is supported
 # Inputs
 
 Name | Description | Type | Default | Required
-----   -----------   ----   -------   --------
+---- | ----------- | ---- |  ------- |  --------
 acl |  (Optional) The canned ACL to apply. Defaults to 'private'. Conflicts with gran | string | "private" | no
 
 #   Author

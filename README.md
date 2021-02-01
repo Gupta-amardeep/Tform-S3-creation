@@ -1,7 +1,7 @@
 ## AWS S3 bucket Terraform creation
 
 Terraform module which create S3 bucket on AWS with atmost features provided by Terraform AWS provider.
-We can add additional inputs like policy, logging, replication etc. as per system design. 
+We can also add additional inputs like policy, logging, replication etc. as per system design. 
 
 Here we can use count, each, for_each to iterate over same definition to create multiple buckets.
 
